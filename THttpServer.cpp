@@ -21,7 +21,7 @@
 #include <sstream>
 #include <iostream>
 
-#include <thrift/transport/THttpServer.h>
+#include "THttpServer.h"
 #include <thrift/transport/TSocket.h>
 
 namespace apache { namespace thrift { namespace transport {
