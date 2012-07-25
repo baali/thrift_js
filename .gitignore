@@ -1,0 +1,10 @@
+/gen-cpp/*
+/gen-js/*
+*.cpp?
+*.html?
+*.js?
+*.rst?
+*.thrift?
+.gitignore?
+CppServer
+Makefile~
