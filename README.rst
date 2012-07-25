@@ -1,8 +1,8 @@
 Overview
 --------
 
-Simple setup to create HTTP transport in Cpp and using javascript
-based client to query server.
+Simple setup of cpp based thrift server for JSON protocol and HTTP
+transport, and a javascript client to interact with it.
 
 Usage
 -----
