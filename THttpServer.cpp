@@ -121,11 +121,7 @@ void THttpServer::flush() {
     "HTTP/1.1 200 OK" << CRLF <<
     "Date: " << getTimeRFC1123() << CRLF <<
     "Server: Thrift/" << CRLF <<
-    "X-Powered-By: " << "Cpp" << CRLF <<
     "Access-Control-Allow-Origin: *" << CRLF <<
-    "Access-Control-Allow-Methods: POST, OPTIONS" << CRLF <<
-    "Access-Control-Allow-Headers: Content-Type" << CRLF <<
-    "Content-Type: application/json" << CRLF <<
     "Content-Length: " << len << CRLF <<
     "Connection: Keep-Alive" << CRLF <<
     CRLF;

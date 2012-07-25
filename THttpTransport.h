@@ -70,7 +70,6 @@ class THttpTransport : public TVirtualTransport<THttpTransport> {
   TMemoryBuffer readBuffer_;
 
   bool readHeaders_;
-  bool gotOptions_;
   bool chunked_;
   bool chunkedDone_;
   uint32_t chunkSize_;

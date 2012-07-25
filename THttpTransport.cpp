@@ -30,7 +30,6 @@ const int THttpTransport::CRLF_LEN = 2;
 THttpTransport::THttpTransport(boost::shared_ptr<TTransport> transport) :
   transport_(transport),
   readHeaders_(true),
-  gotOptions_(false),
   chunked_(false),
   chunkedDone_(false),
   chunkSize_(0),
@@ -85,12 +84,6 @@ uint32_t THttpTransport::readMoreData() {
 
   if (readHeaders_) {
     readHeaders();
-  }
-
-  // here we need magic to skip this more reading part
-  if (gotOptions_) {
-    // what should be value of size?
-    return 0;
   }
 
   if (chunked_) {
@@ -246,7 +239,6 @@ void THttpTransport::readHeaders() {
         statusLine = false;
         finished = parseStatusLine(line);
         if (strcmp(line, "OPTIONS") == 0) {
-          gotOptions_ = true;
           return;
         }
       } else {
