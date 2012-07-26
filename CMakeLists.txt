@@ -86,9 +86,6 @@ else()
     endif()
 endif()
 
-MESSAGE(${Boost_LIBRARIES})
-
-
 ###################################################################
 # Generate stub to generate thrift related header and cpp files
 #####################################################################
