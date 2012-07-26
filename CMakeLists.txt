@@ -149,6 +149,5 @@ endif()
 if(WIN32)
   target_link_libraries(CppServer
     ${Boost_LIBRARIES}
-    thrift
     )
 endif()
