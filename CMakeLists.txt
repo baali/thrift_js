@@ -88,6 +88,17 @@ endif()
 
 MESSAGE(${Boost_LIBRARIES})
 
+
+###################################################################
+# Generate stub to generate thrift related header and cpp files
+#####################################################################
+MACRO (GENERATE_STUBS THRIFT_FILE LANGUAGE)
+    execute_process(COMMAND  ${THRIFT_COMPILER} -o  ${CMAKE_SOURCE_DIR} --gen  ${LANGUAGE}   ${CMAKE_SOURCE_DIR}/i2p/ServiceDefinitions/${THRIFT_FILE})
+ENDMACRO(GENERATE_STUBS)
+
+GENERATE_STUBS( tutorial.thrift cpp )
+GENERATE_STUBS( shared.thrift cpp )
+
 ###################################################################
 # Project files
 #####################################################################
