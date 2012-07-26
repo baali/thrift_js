@@ -85,12 +85,9 @@ bool THttpServer::parseStatusLine(char* status) {
     h <<
       "HTTP/1.1 200 OK" << CRLF <<
       "Date: " << getTimeRFC1123() << CRLF <<
-      "Server: Thrift/0.8" << CRLF <<
-      "X-Powered-By: " << "Cpp" << CRLF <<
       "Access-Control-Allow-Origin: *" << CRLF <<
       "Access-Control-Allow-Methods: POST, OPTIONS" << CRLF <<
       "Access-Control-Allow-Headers: Content-Type" << CRLF <<
-      "Connection: Keep-Alive" << CRLF <<
       CRLF;
     string header = h.str();
 

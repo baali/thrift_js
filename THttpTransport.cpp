@@ -238,9 +238,6 @@ void THttpTransport::readHeaders() {
       if (statusLine) {
         statusLine = false;
         finished = parseStatusLine(line);
-        if (strcmp(line, "OPTIONS") == 0) {
-          return;
-        }
       } else {
         parseHeader(line);
       }
